@@ -1,0 +1,597 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+#foods {
+    background-color: #f8f9fa;
+    padding: 100px 0;
+}
+
+#foods .container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#foods .container .item {
+    width: 25%;
+    padding: 0 15px;
+}
+
+#foods .container .item .icon {
+    text-align: center;
+    font-size: 40px;
+    margin: 0 0 20 0;
+}
+
+#foods .container .item h3 {
+    text-align: center;
+    font-size: 24px;
+    color: #cf1d16;
+    margin: 0 0 20px 0;
+    text-transform: capitalize;
+}
+
+#foods .container .item p {
+    color: #868e96;
+    text-align: center;
+    line-height: 1.5;
+}
+
+@media(max-width: 900px) {
+
+    #foods .container .item {
+        width: 50%;
+        margin: 0 0 30px 0;
+
+    }
+}
+
+@media(max-width: 550px) {
+
+    #foods .container .item {
+        width: 100%;
+
+    }
+}
+
+#main {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../img/main.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+}
+
+#main h1 {
+    font-size: 40px;
+    color: white;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 1px black;
+    margin: 0 0 30px 0;
+}
+
+#main h4 {
+    font-size: 20px;
+    line-height: 1.5;
+    font-weight: 300;
+    color: #fff;
+    margin: 0 0 30px 0;
+}
+
+#main a {
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 2px solid white;
+    color: white;
+    padding: 20px 30px;
+    transition: 400ms all;
+}
+
+#main a:hover {
+    background: #fff;
+    color: black;
+}
+
+.header .line {
+    width: 100px;
+    height: 2px;
+    background-color: #cf1d16;
+    margin: 10px auto;
+
+}
+
+.header {
+    position: relative;
+}
+
+.header h2 {
+    position: relative;
+    text-align: center;
+    font-size: 50px;
+    text-transform: uppercase;
+    z-index: 1;
+}
+
+.header span {
+    font-size: 200px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    z-index: 0;
+    line-height: 20px;
+    font-weight: bold;
+    color: rgba(128, 128, 128, 0.116);
+    user-select: none;
+    white-space: nowrap;
+}
+
+.foods {
+    display: flex;
+    position: relative;
+    z-index: 2;
+    margin: 100px 0 0 0;
+
+}
+
+.foods .item {
+    width: calc(100%/3);
+    padding: 0 10px;
+}
+
+.foods .item a img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: 0.4s all;
+}
+
+.foods .item a {
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+.foods .item .mask {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.foods .item a:hover img {
+    transform: scale(1.1);
+}
+
+.foods .item .data {
+    position: absolute;
+    text-align: center;
+    z-index: 4;
+    width: 100%;
+    padding: 15px;
+    color: #fff;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.foods .item .data .circle {
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 20px auto;
+    border-radius: 100%;
+    background-color: #cf1d16;
+    text-align: center;
+    font-weight: 700;
+    line-height: 100px;
+    transition: 0.4s all;
+}
+
+.foods .item .data p {
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.foods .item a:hover .circle {
+    background-color: transparent !important;
+    border: 1px solid white;
+}
+
+.navigation {
+    transition: .3s all;
+    background: black;
+}
+
+.navigation.white {
+    background: rgba(255, 255, 255, 0.705);
+}
+
+
+.navigation .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.navigation .logo a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 30px;
+    letter-spacing: 3px;
+}
+
+.navigation.white .logo a {
+    color: black;
+}
+
+.navigation .menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.navigation .menu li {
+    display: inline-block;
+    margin: 0 20px 0 0;
+
+}
+
+.navigation .menu li:last-child {
+    margin: 0;
+}
+
+.navigation .menu li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 300;
+    letter-spacing: 3px;
+    font-size: 12px;
+}
+
+.navigation.white .menu li a {
+    color: black;
+}
+
+.navigation .contact a {
+    color: #fff;
+    text-decoration: none;
+    background-color: #cf1d16;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 3px;
+    padding: 10px 20px;
+    display: inline-block;
+}
+
+.navigation {
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 69;
+    transition: 0.6s all;
+}
+
+/* @media(max-width: 900px) {
+
+    .navigation .container {
+        width: 50%;
+        margin: 0 0 30px 0;
+    }
+}
+
+*/
+/* @media(max-width: 750px) {
+
+    .navigation .container {
+        width: 50%;
+        margin: 0 0 60px 0;
+        display: flex;
+        flex-direction: column; */
+/* width: 100%;
+        justify-content: center;
+        align-items: center;
+        text-align: center; */
+
+
+
+
+/* RESPONSYWNOŚĆ POCZĄTEK */
+@media(max-width: 750px) {
+
+    .navigation .container .logo {
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+@media(max-width: 750px) {
+    .header span {
+        font-size: 100px
+    }
+
+}
+
+
+@media(max-width: 550px) {
+
+    .container .foods .item .a .data {
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+}
+
+@media(max-width: 900px) {
+
+    .container .foods .item .data .circle {
+        width: 50px;
+        height: 50px;
+        margin: 0 auto 20px auto;
+        line-height: 50px;
+        font-size: 12px;
+
+    }
+}
+
+@media(max-width: 400px) {
+    #main {
+        padding: 25px;
+        top: 100px;
+    }
+}
+
+@media(max-width: 550px) {
+    .foods {
+        flex-wrap: wrap;
+    }
+
+    .foods .item {
+        width: 100%;
+        padding: 0 10px;
+        margin: 0 0 10px 0;
+    }
+}
+
+@media(max-width: 550px) {
+    #main h1 {
+        font-size: 20px;
+    }
+
+    #main h4 {
+        font-size: 10px;
+
+    }
+}
+
+/* RESPONSYWNOŚĆ KONIEC */
+
+/* To co dzisiaj  */
+form .row {
+    margin: 0 0 20px 0;
+}
+
+form .row .column {
+    display: flex;
+    justify-content: space-between;
+}
+
+form .row .column .left,
+form .row .column .right {
+    width: 48%;
+}
+
+form .row label,
+form .row p.title {
+    display: block;
+    margin: 0 0 8px 0;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+form .row input[type="text"],
+form .row input[type="url"],
+form .row input[type="email"],
+form .row textarea,
+form .row select {
+    width: 100%;
+    border: 1px solid #808080;
+    padding: 10px 15px;
+}
+
+/* ściągnięcie pogrubienia z płci i zainteresowań */
+form .row .checkbox label,
+form .row .radio label {
+    font-weight: 400;
+}
+
+form .row input[type="text"]:focus:invalid,
+form .row input[type="url"]:focus:invalid,
+form .row input[type="email"]:focus:invalid,
+form .row textarea:focus:invalid,
+form .row select:focus:invalid {
+    border-color: red;
+}
+
+form .row input[type="text"]:required:invalid,
+form .row input[type="url"]:required:invalid,
+form .row input[type="email"]:required:invalid,
+form .row textarea:required:invalid,
+form .row select:required:invalid {
+    border-color: red;
+}
+
+form .row input[type="text"]:required:valid,
+form .row input[type="url"]:required:valid,
+form .row input[type="email"]:required:valid,
+form .row textarea:required:valid,
+form .row select:required:valid {
+    border-color: green;
+}
+
+#arrow-up {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: #cf1d16;
+    border-radius: 7px;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#arrow-up.show {
+    display: flex;
+}
+
+.panel {
+    border-bottom: 1px solid #afafaf;
+    padding: 0 0 10px 0;
+    margin: 0 0 10px 0;
+}
+
+.panel .header {
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 18px;
+    padding: 15px 0px;
+}
+
+.panel .description {
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.6s all;
+}
+
+#hamburger {
+    height: 40px;
+    width: 40px;
+    background-color: black;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    /* border: 1 px solid rgba(255, 255, 255, 0); */
+    display: none;
+}
+
+#hamburger span {
+    position: absolute;
+    height: 2px;
+    width: 20px;
+    background-color: #fff;
+    display: block;
+    top: 0;
+    left: 10px;
+
+
+}
+
+#hamburger span:nth-child(1) {
+    top: 13px;
+}
+
+#hamburger span:nth-child(2) {
+    top: 20px;
+}
+
+#hamburger span:nth-child(3) {
+    top: 27px;
+}
+
+#hamburger.active span:nth-child(2) {
+    display: none;
+}
+
+#hamburger.active span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 20px;
+    left: 12px;
+}
+
+#hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 20px;
+}
+
+@media(max-width: 900px) {
+    #hamburger {
+        display: block;
+        position: relative;
+    }
+
+    .navigation .contact {
+        display: none;
+
+    }
+
+    body.menu-open {
+        overflow: hidden;
+    }
+
+    .navigation .menu {
+        display: none;
+    }
+
+    body.menu-open .navigation .container {
+        display: block;
+
+    }
+
+
+    body.menu-open .navigation .contact {
+        display: block;
+        transition: 0.6s all;
+    }
+
+    body.menu-open .navigation .menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        transition: 0.6s all;
+
+    }
+
+    body.menu-open .navigation .menu li {
+        display: flex;
+        padding: 10px;
+
+    }
+
+    body.menu-open #hamburger {
+        left: 95.4%;
+        bottom: 235px;
+        display: block;
+        position: relative;
+
+
+    }
+
+
+}
