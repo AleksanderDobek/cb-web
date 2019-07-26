@@ -1,0 +1,171 @@
+/********************
+LOADER KRĘCIOŁEK******/
+
+
+.lds-hourglass {
+    display: inline-block;
+    position: relative;
+    width: 64px;
+    height: 64px;
+}
+
+.lds-hourglass:after {
+    content: " ";
+    display: block;
+    border-radius: 50%;
+    width: 0;
+    height: 0;
+    margin: 6px;
+    box-sizing: border-box;
+    border: 26px solid rgb(7, 231, 247);
+    border-color: rgb(7, 231, 247) transparent rgb(7, 231, 247) transparent;
+    animation: lds-hourglass 1.2s infinite;
+}
+
+@keyframes lds-hourglass {
+    0% {
+        transform: rotate(0);
+        animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+
+    50% {
+        transform: rotate(900deg);
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+
+    100% {
+        transform: rotate(1800deg);
+    }
+}
+
+/***********
+Main
+*********/
+
+html,
+body {
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+body {
+    background-image: url(../img/cover_thumb.jpg);
+    background-size: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    overflow-x: hidden;
+}
+
+.weather {
+    max-width: 800px;
+    width: 100%;
+    padding: 50px 15px;
+}
+
+.weather h1 {
+    text-align: center;
+    left: 0;
+    margin: 0 0 20px 0;
+    font-family: 'Ultra', serif;
+    color: rgba(255, 255, 255, 0.89);
+
+
+}
+
+.weather .loader {
+    text-align: center;
+    /*** blokowe margi 0 auto centrujesz a inline block jak text czyli text align center **/
+    display: none;
+}
+
+.weather .loader.show {
+    display: block;
+}
+
+.left {
+    font-size: 40px;
+}
+
+#get-city {
+    display: block;
+    width: 50 color: rgba(255, 255, 255, 0.89);
+}
+
+[type='submit'] {
+    background: rgb(7, 231, 247);
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 4px;
+    border: 2px solid rgba(255, 255, 255, 0.89);
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    width: 200px;
+    height: 50px;
+}
+
+[type='submit']:hover {
+    background: #fff;
+    color: rgb(7, 231, 247);
+}
+
+#city {
+    width: 50%;
+    height: 100%;
+    border: 2px solid rgb(7, 231, 247);
+    border-radius: 5px;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+#city:hover {
+    background: rgb(7, 231, 247);
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+#current-day .day {
+    display: block;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#current-day .day .left {
+    display: flex;
+    justify-content: space-between;
+}
+
+#current-day .day .right {
+    display: flex;
+    justify-content: center;
+
+
+}
+
+#current-day .day .right img {
+    width: 100px;
+    height: 100px;
+    box-shadow: 0px 0px 5px 17px rgba(0, 0, 0, 0.75);
+    border-radius: 50%;
+
+
+}
+
+#current-day .day .left .name {
+    color: rgb(49, 57, 58);
+    font-weight: 700;
+}
+
+#current-day .day .left .value {
+    color: rgb(6, 126, 134);
+    font-weight: 700;
+}
+
+h2 {
+    color: rgb(6, 126, 134);
+
+}
