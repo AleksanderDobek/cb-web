@@ -1,0 +1,123 @@
+.footer-bottom {
+    box-sizing: border-box;
+    display: block;
+    background: black;
+    padding: 20px 0 15px 0;
+
+
+    .container {
+        .row {
+            display: flex;
+            justify-content: space-between;
+
+            .social {
+                .clearfix {
+                    display: flex;
+
+                    &::after {
+                        content: "";
+                        box-sizing: border-box;
+                        display: block;
+                        height: 100%;
+
+
+
+                    }
+
+
+
+                    a {
+                        display: block;
+                        width: 30px;
+                        height: 30px;
+                        text-align: center;
+                        color: #fff;
+                        text-decoration: none;
+                        background: #333;
+                        font-size: 18px;
+                        color: #fff;
+                        border-radius: 100%;
+                        margin: 0 5px 5px 0;
+                        height: 30px;
+                        overflow: hidden;
+                        transition: .5s all;
+
+
+
+
+                        &::before {
+                            content: "";
+                            box-sizing: border-box;
+                            height: 100px;
+                        }
+
+
+
+                        &:hover:nth-child(1) {
+                            background: #007bff;
+
+
+
+                            &::before {
+                                content: "";
+                                box-sizing: border-box;
+                                height: 100px;
+                                top: 100px;
+
+
+                            }
+
+
+                        }
+
+                        &:hover:nth-child(2) {
+                            background: #17a2b8;
+                        }
+
+                        &:hover:nth-child(3) {
+                            background: #dc3545;
+                        }
+
+                        &:hover:nth-child(4) {
+                            background: #17a2b8;
+                        }
+
+                        &:hover:nth-child(5) {
+                            background: #4782d3;
+
+
+                        }
+
+
+
+                        i {
+                            display: block;
+                            position: relative;
+                            line-height: 30px;
+                            transition: .5s all;
+
+
+
+
+
+
+
+
+                            // width: 30px;
+                            // height: 30px;
+                        }
+
+
+
+
+                    }
+                }
+
+            }
+        }
+    }
+
+    .copyright {
+        color: #777;
+    }
+}

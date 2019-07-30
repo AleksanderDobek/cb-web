@@ -1,0 +1,44 @@
+nav {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 120;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .logo {
+            a {
+                text-decoration: none;
+
+                .dark {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+nav {
+    &.fixed {
+        position: fixed;
+        background: $secondary-color;
+
+        .container {
+            .logo {
+                a {
+                    .dark {
+                        display: block;
+                    }
+
+                    .white {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
