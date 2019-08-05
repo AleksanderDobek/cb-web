@@ -1,0 +1,93 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #cacaca;
+}
+
+.game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0;
+
+}
+
+.game-category {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0 0 20px 0;
+}
+
+.game-attempts {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    border: 1px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 700;
+    background: #fff;
+    margin: 0 0 20px 0;
+}
+
+.game-sentence {
+    text-align: center;
+}
+
+.game-sentence-letter {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #000;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    font-size: 20px;
+    margin: 20px 10px 30px 10px;
+    vertical-align: top;
+}
+
+.game-sentence-space {
+    display: inline-flex;
+    width: 50px;
+}
+
+.game-letters {
+    text-align: center;
+    margin: 0 0 40px 0;
+}
+
+.game-letters button {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #000;
+    background: #fff;
+    text-align: center;
+    margin: 0 5px 0 0;
+    cursor: pointer;
+}
+
+.game-letters button:hover {
+    background: #f15C5C;
+    border: 1px solid #efefef;
+    color: #fff;
+}
+
+.game-letters button:disabled {
+    color: #fff;
+    background: #000;
+}
+
+.game-start {
+    padding: 20px 40px;
+    border-radius: 5px;
+    color: #fff;
+    background: #f15C5C;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 20px;
+}
