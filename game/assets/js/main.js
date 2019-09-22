@@ -82,9 +82,9 @@ function checkLetterInSentence(letter) {
         }
 
 
-        noSpace = sentence.replace(/ /g, "");
+        sentenceNoSpace = slogan.replace(new RegExp(letter, 'g'), '');
 
-        if (letters.length === slogan) {
+        if (sentenceNoSpace.length === 0) {
             alert("wygrałeś")
         }
 

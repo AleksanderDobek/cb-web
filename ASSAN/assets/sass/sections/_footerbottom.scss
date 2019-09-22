@@ -107,6 +107,12 @@
                             // height: 30px;
                         }
 
+                        &:hover i {
+                            &:first-of-type {
+                                margin-top: -30px;
+                            }
+                        }
+
 
 
 

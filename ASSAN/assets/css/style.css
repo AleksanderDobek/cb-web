@@ -2152,6 +2152,10 @@ footer .container .mainrow .row .ul li .media-body h5 a {
   transition: .5s all;
 }
 
+.footer-bottom .container .row .social .clearfix a:hover i:first-of-type {
+  margin-top: -30px;
+}
+
 .footer-bottom .copyright {
   color: #777;
 }
