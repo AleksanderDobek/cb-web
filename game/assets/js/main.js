@@ -111,11 +111,11 @@ function showAttempts() {
 function createLetters() {
     lettersContainer.innerHTML = "";
 
-    ///nowa petla po nowemu bez if sratata
+    ///nowa pętla
     letters.forEach(function (letter) {
         lettersContainer.innerHTML
             += '<button class="game-letter" data-letter="' + letter + '">' + letter + '</button>'
-        // letter tutaj to  juz konkretna literka z tablicy  += nie usuwa ale dodaje poniewaz to petla
+        // letter tutaj to  juz konkretna literka z tablicy
     })
 }
 
@@ -129,7 +129,7 @@ function generateNewSentence() {
         let slogan = response.data.slogan.toUpperCase();
         sentence = slogan;
         categoryContainer.innerHTML = category;
-        sentenceNoSpace = slogan.replace(/ /g, "");  //wyrazenie regularne złamanielinii bo nie czyta
+        sentenceNoSpace = slogan.replace(/ /g, "");
         sentenceContainer.innerHTML = "";
 
         for (let i = 0; i < slogan.length; i++) {
